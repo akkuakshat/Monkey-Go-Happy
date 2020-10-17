@@ -4,7 +4,8 @@ var FoodGroup, obstacleGroup
 var score, backGround,backGroundimg;
 
 function preload(){  
-  monkey_running=            loadAnimation("Monkey_01.png","Monkey_02.png","Monkey_03.png","Monkey_04.png","Monkey_05.png","Monkey_06.png","Monkey_07.png","Monkey_08.png","Monkey_09.png","Monkey_10.png");
+  monkey_running=            
+  loadAnimation("Monkey_01.png","Monkey_02.png","Monkey_03.png","Monkey_04.png","Monkey_05.png","Monkey_06.png","Monkey_07.png","Monkey_08.png","Monkey_09.png","Monkey_10.png");
   
   bananaImage = loadImage("banana.png");
   obstaceImage = loadImage("stone.png");
@@ -17,14 +18,14 @@ function setup() {
    createCanvas(600, 600); 
   
   
-   monkey=createSprite(80,315,20,20);
+   monkey=createSprite(80,500,20,20);
    monkey.addAnimation("run", monkey_running);  
    monkey.scale=0.1;
   
-  ground = createSprite(400,350,900,10);
- ground.velocityX=-4;
+ground = createSprite(400,550,900,10);
+ground.velocityX=-4;
 ground.x=ground.width/2;
- ground.visible=false;
+ground.visible=false;
   
   FoodGroup = new Group();
   obstaclesGroup = new Group();
@@ -93,8 +94,8 @@ function draw() {
 function spawnFood() {
   
   if (frameCount % 80 === 0) {
-    banana = createSprite(600,250,40,10);
-    banana.y = random(120,200);    
+    banana = createSprite(600,300,40,10);
+    banana.y = random(200,320);    
     banana.velocityX = -5;
     
    
@@ -112,7 +113,7 @@ function spawnFood() {
 
 function spawnObstacles() {
   if(frameCount % 300 === 0) {
-    obstacle = createSprite(800,320,10,40);
+    obstacle = createSprite(800,530,10,40);
     obstacle.velocityX = -6;
     obstacle.addImage(obstaceImage);
     obstacle.scale=0.15;
