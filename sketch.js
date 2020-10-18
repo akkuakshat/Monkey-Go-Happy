@@ -19,6 +19,7 @@ function setup() {
    backGround=createSprite(300,300,300,300);
    backGround.addImage("back" backGroundimg);
    backGround.x=backGround.width/2;
+   backGround.velocityX=-4;
    monkey=createSprite(80,500,20,20);
    monkey.addAnimation("run", monkey_running);  
    monkey.scale=0.1;
