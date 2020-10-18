@@ -39,7 +39,7 @@ ground.visible=false;
 
 function draw() {
   
-  background(backGroundimg);
+ // background(backGroundimg);
 
   if (ground.x < 0){
       ground.x = ground.width/2;
