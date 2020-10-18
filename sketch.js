@@ -16,10 +16,13 @@ function preload(){
 
 function setup() {
    createCanvas(600, 600); 
+  
    backGround=createSprite(300,300,300,300);
    backGround.addImage("back" backGroundimg);
    backGround.x=backGround.width/2;
    backGround.velocityX=-4;
+  
+  
    monkey=createSprite(80,500,20,20);
    monkey.addAnimation("run", monkey_running);  
    monkey.scale=0.1;
@@ -40,7 +43,7 @@ ground.visible=false;
 
 function draw() {
   
- // background(backGroundimg);
+
 
   if (ground.x < 0){
       ground.x = ground.width/2;
